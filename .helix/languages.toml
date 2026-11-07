@@ -1,0 +1,10 @@
+[language-server.clangd]
+command = "clangd"
+args = [
+  "--background-index",
+  "--compile-commands-dir=/home/htrueba/Desktop/repos/aurora/build",
+  "--query-driver=/home/*/.espressif/tools/xtensa-esp-elf/*/xtensa-esp-elf/bin/xtensa-esp32s2-elf-*",
+]
+
+[language-server.clangd.environment]
+XDG_CONFIG_HOME = "/home/htrueba/Desktop/repos/aurora/.helix"

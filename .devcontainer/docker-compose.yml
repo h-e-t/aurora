@@ -1,3 +1,0 @@
-services:
-  idf:
-    command: sleep infinity

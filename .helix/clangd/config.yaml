@@ -1,0 +1,10 @@
+If:
+  PathMatch: '^/home/htrueba/Desktop/repos/esp/esp-idf-v6\.0\.2/.*$'
+CompileFlags:
+  Remove:
+    - -mlongcalls
+    - -fno-shrink-wrap
+    - -fstrict-volatile-bitfields
+    - -fno-tree-switch-conversion
+    - -fzero-init-padding-bits=*
+    - -fno-malloc-dce
