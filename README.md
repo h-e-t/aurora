@@ -38,3 +38,13 @@ The firmware image is written to `build/mekf_firmware.bin`. To flash a connected
 ## Hardware documentation
 
 See [docs/components/README.md](docs/components/README.md) for official component references and a script to download the vendor PDFs.
+
+## Format C/C++ files on commit
+
+The repository hook formats staged C/C++ files with `.clang-format` while preserving unstaged edits. Enable it once in this clone:
+
+```bash
+git config --local core.hooksPath .githooks
+```
+
+The hook requires Python 3 and `clang-format` on `PATH`.
