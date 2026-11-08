@@ -5,4 +5,5 @@ idf_component_register(
         "."
     REQUIRES
         neo6m
+        bmp280
 )
