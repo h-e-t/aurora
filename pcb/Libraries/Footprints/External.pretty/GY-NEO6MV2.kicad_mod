@@ -1,0 +1,67 @@
+(footprint "GY-NEO6MV2"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at -32.75 1 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "c4d25e84-9d07-4ccf-89c5-4e5c2df7baf1")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "GY-NEO6MV2"
+		(at -18 -22 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "51c6848e-7eed-45f0-aa54-4ccee4e965a4")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Footprint" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "804a9322-2076-497a-b22b-8cc8a65aaa19")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "5d9dedff-053d-4471-9954-c2c1d2d391a1")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "f0666741-1db5-4bba-b3b9-812fc9506fb6")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+)
