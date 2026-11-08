@@ -48,3 +48,9 @@ git config --local core.hooksPath .githooks
 ```
 
 The hook requires Python 3 and `clang-format` on `PATH`.
+
+## ESP32 application task affinity
+
+Keep application work on separate cores: reserve core 0 for time-critical IMU
+sampling and state propagation, and pin GPS, barometer, SD-card, and logging
+tasks to core 1. Keep blocking I/O and log output off the propagation core.
