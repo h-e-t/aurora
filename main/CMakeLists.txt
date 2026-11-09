@@ -6,4 +6,9 @@ idf_component_register(
     REQUIRES
         neo6m
         bmp280
+        sd_card
+        esp_timer
+        esp_driver_i2c
+        freertos
+        log
 )

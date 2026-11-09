@@ -4,11 +4,11 @@ Adding this folder does not affect the firmware build: ESP-IDF CMake builds the 
 
 ## Hardware assumptions
 
-- The firmware is currently configured for an ESP32-S2 (`idf.py set-target esp32s2`).
+- The firmware is currently configured for a classic ESP32 (`idf.py set-target esp32`).
 - The GPS is a u-blox NEO-6M module. The receiver data sheet covers the u-blox module; a breakout board may have additional power, antenna, and pinout details.
 - The IMU is an InvenSense/TDK MPU-6050.
 - The pressure sensor is a Bosch BMP280.
-- The SD card reader board has not been identified by manufacturer or model. The ESP32-S2 has no SDMMC host controller, so the card must be accessed over SPI. The generic ESP-IDF storage and SPI documentation is linked below; board-specific voltage and pin information needs the reader board's model.
+- The SD card reader board has not been identified by manufacturer or model. The board diagram connects it over SPI; the generic ESP-IDF storage and SPI documentation is linked below. Board-specific voltage information depends on the reader board's model.
 
 ## Download the vendor PDFs
 
@@ -28,9 +28,12 @@ The PDFs will be saved under `docs/components/datasheets/`.
 | MPU-6050 | Register map and descriptions | [PDF](https://invensense.tdk.com/wp-content/uploads/2015/02/MPU-6000-Register-Map1.pdf) |
 | BMP280 | BMP280 data sheet (BST-BMP280-DS001) | [PDF](https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bmp280-ds001.pdf) |
 
-## ESP32-S2 SD card and storage docs
+The SD card reader is connected using SPI on GPIO2 (CS), GPIO23 (MOSI), GPIO19
+(MISO), and GPIO18 (SCLK). See [the SD card component notes](../../components/sd_card/README.md)
+for the current logging API and session behavior.
+
+## ESP32 SD card and storage docs
 
 - [ESP-IDF v6.0 SD/SDIO/MMC driver API](https://docs.espressif.com/projects/esp-idf/en/v6.0/esp32/api-reference/storage/sdmmc.html)
 - [ESP-IDF SD SPI host driver API](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/peripherals/sdspi_host.html)
-- [ESP-IDF FAT filesystem API](https://docs.espressif.com/projects/esp-idf/en/latest/esp32s2/api-reference/storage/fatfs.html)
-- [ESP32-S2 SD-card interface note](https://docs.espressif.com/projects/esp-idf/en/v5.5.2/esp32s2/api-reference/storage/sdmmc.html) — documents that the S2 uses SPI for SD cards rather than an SDMMC host.
+- [ESP-IDF FAT filesystem API](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/storage/fatfs.html)
